@@ -32,4 +32,21 @@ python hello.py
 --Deactivate environment
 deactivate
 
+--Setup git
+sudo apt-get install git
+git config --global user.name "username"
+git config --global user.email "email"
 
+mkdir git/testing
+git init testing
+cd git/testing
+nano README.txt
+nano hello.c
+git add README.txt
+git add hello.c
+git commit -m "message"
+git remote add origin https://github/username/repository.git
+git push origin master
+
+Note: If using two factor authentication, need personal token to be
+authorized to push 
